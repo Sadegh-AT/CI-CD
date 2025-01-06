@@ -4,7 +4,7 @@ class Calculator {
   }
 
   subtract(a, b) {
-    return a - b;
+    return a + b;
   }
   power(a, b) {
     return Math.pow(a, b);
