@@ -2,7 +2,14 @@ class Calculator {
   sum(a, b) {
     return a + b;
   }
-
+  average(a) {
+    if (Array.isArray(a)) {
+      const sum = a.reduce((acc, val) => acc + val, 0);
+      return sum / a.length;
+    } else {
+      throw new Error("Input is not an array");
+    }
+  }
   subtract(a, b) {
     return a - b;
   }

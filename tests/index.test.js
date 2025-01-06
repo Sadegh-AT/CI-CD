@@ -43,4 +43,12 @@ describe("Calculator", function () {
       calculator.sqrt(-1);
     }).should.throw("Square root of negative number is not allowed");
   });
+  it("should return average", function () {
+    calculator.average([1, 2, 3, 4]).should.equal(2.5);
+  });
+  it("should throw an error when average input is not array", function () {
+    (function () {
+      calculator.average(2);
+    }).should.throw("Input is not an array");
+  });
 });
